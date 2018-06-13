@@ -1,0 +1,24 @@
+:80 {
+    root /app/public
+    gzip
+    fastcgi / 127.0.0.1:9000 php {
+        env SERVER_NAME {hostonly}
+    }
+
+    rewrite {
+        to {path} {path}/ /index.php?{query}
+    }
+
+    log /_debugbar/ /dev/null
+    log / stdout "[caddy] {combined}"
+
+    expires {
+        match .css$ 1d
+        match .js$ 1d
+        match .jpg$ 1d
+        match .png$ 1d
+    }
+
+    #minify
+    #ratelimit / 1 1 second
+}
