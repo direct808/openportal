@@ -1,13 +1,13 @@
 #!/bin/sh
 
 
-php /wait-mysql-connection.php
+#php /wait-mysql-connection.php
 
 
-if [ "${CRON}" = "true"  ]; then
-    echo "Start cron";
-    cron
-fi
+#if [ "${CRON}" = "true"  ]; then
+#    echo "Start cron";
+#    cron
+#fi
 
 
 exec "$@"

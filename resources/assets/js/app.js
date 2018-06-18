@@ -2,7 +2,7 @@
 
 // let Vue = window.Vue = require('vue');
 
-import Vue from 'vue/dist/vue.esm';
+import Vue from 'vue';
 
 
 
