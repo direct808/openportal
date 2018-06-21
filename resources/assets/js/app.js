@@ -1,6 +1,4 @@
-// require('./bootstrap');
 
-// let Vue = window.Vue = require('vue');
 
 import Vue from 'vue';
 
